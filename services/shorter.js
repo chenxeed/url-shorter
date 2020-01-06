@@ -12,15 +12,16 @@ async function readShorter(short) {
 
 async function createShorter(url) {
   const newShorter =  new Shorter({
+    _id: new mongoose.Types.ObjectId(),
     url: url,
     short: shortid()
   })
 
   try {
-    await newShorter.save()
-    return true
+    const shorter = await newShorter.save()
+    return shorter
   } catch (e) {
-    return false
+    throw e
   }
 }
 

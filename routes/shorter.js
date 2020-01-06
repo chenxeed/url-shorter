@@ -3,7 +3,7 @@ var router = express.Router();
 const shorterService = require('../services/shorter')
 
 /* GET shorter unique URL */
-router.get('/shorter/:short', async function(req, res, next) {
+router.get('/read/:short', async function(req, res) {
   const { short } = req.params
 
   const shorter = await shorterService.readShorter(short)
@@ -13,7 +13,7 @@ router.get('/shorter/:short', async function(req, res, next) {
 
 
 /* POST shorter unique URL */
-router.post('/shorter/:short', async function(req, res, next) {
+router.post('/create', async function(req, res) {
   const { url } = req.body
 
   const shorter = await shorterService.createShorter(url)
