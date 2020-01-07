@@ -17,10 +17,13 @@
   </div>
 
   <div>
-    <h2>Read URL</h2>
-    <input id="short" name="short" type="text" />
-    <button id="read">Read!</button>
-    <input id="read-result" readonly type="text" />
+    <h2>Browser Simulator</h2>
+    <div class="browser">
+      <div>
+        <input id="short" name="short" type="text" value="https://chenxeed.com" />
+      </div>
+      <iframe id="browser" src="https://chenxeed.com"></iframe>
+    </div>
   </div>
 
   <script src="/javascripts/dist/bundle.min.js" charset="utf-8"></script>

@@ -4,3 +4,16 @@ body {
 
 a {
   color: #00B7FF; }
+
+.browser {
+  width: 100%;
+}
+
+.browser input {
+  width: 100%;
+}
+
+.browser iframe {
+  width: 100%;
+  height: 600px;
+}
